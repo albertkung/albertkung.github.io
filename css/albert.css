@@ -1,0 +1,29 @@
+body {
+    padding-top: 50px;
+}
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+}
+.navbar {
+    font-family: 'Candara';
+    text-transform: uppercase;
+}
+.jumbotron .container .h1 {
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Futura';
+}
+.jumbotron .container .h2 {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Futura';
+}

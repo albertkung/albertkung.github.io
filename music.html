@@ -55,13 +55,15 @@
     </div>
 
     <div class="container">
-        <div class="well well-lg" style="background-image: url('media/img/flower-peddler-img.jpg'); background-size: cover">
-            <h2 class="song-title">Flower Peddler</h2>
-            <audio src="media/mp3/flower peddler.mp3" controls>Audio not supported by browser.</audio>
-        </div>
-        <div class="well well-lg" style="background-image: url('media/img/break-img.jpg'); background-size: cover">
-            <h2 class="song-title">Break</h2>
-            <audio src="media/mp3/break.mp3" controls>Audio not supported by browser.</audio>
+        <div class="media">
+            <div class="media-left">
+                <ul class="nav nav-pills nav-stacked">
+                    <li id="nav-listen" role="presentation" class="active"><a id="listen" href="#">Listen</a></li>
+                    <li id="nav-download" role="presentation"><a id="download" href="#">Download</a></li>
+                    <li role="presentation"><a href="https://soundcloud.com/alterangel">Soundcloud</a></li>
+                </ul>
+            </div>
+            <div class="media-body" id="media-main"></div>
         </div>
     </div>
 
@@ -70,6 +72,9 @@
 
     <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Music controls -->
+    <script src="js/music.js"></script>
 
 </body>
 </html>

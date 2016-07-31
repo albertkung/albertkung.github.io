@@ -62,3 +62,7 @@ audio {
 .vertical-line {
     border-left: thick solid #000000;
 }
+.download-header {
+	text-align: center;
+	font-family: 'Palatino';
+}

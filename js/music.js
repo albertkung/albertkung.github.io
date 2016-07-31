@@ -3,8 +3,8 @@ document.getElementById("listen").addEventListener("click", Listen);
 document.getElementById("download").addEventListener("click", Download);
 
 function Listen(){
-    document.getElementById("nav-listen").className = "";
-    document.getElementById("nav-download").className = "active";
+    document.getElementById("nav-listen").className = "active";
+    document.getElementById("nav-download").className = "";
     $( "#media-main" ).load( "fragment/listen.html" );
 }
 

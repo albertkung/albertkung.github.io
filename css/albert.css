@@ -51,3 +51,7 @@ audio {
     font-family: 'Palatino';
     margin-bottom: 48px;
 }
+.download-content {
+    margin-left: 20%;
+    margin-right: 20%;
+}

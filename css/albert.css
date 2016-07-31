@@ -34,22 +34,6 @@ body {
     font-size: 18px;
     font-family: 'Candara';
     margin: 10px;
-    margin-left: 35%;
-    margin-right: 35%;
-}
-.contact-left {
-    float: left;
-    width: 150px;
-    text-align: left;
-    margin: 2px 10px;
-    display: inline;
-}
-.contact-right {
-    float: left;
-    width: 150px;
-    text-align: left;
-    margin: 2px 10px;
-    display: inline;
 }
 .song-title {
     font-family: 'Open Sans', sans-serif;

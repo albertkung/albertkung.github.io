@@ -65,10 +65,5 @@ audio {
 .download-header {
     text-align: center;
     font-family: 'Palatino';
-    margin-bottom: 36px;
-}
-.download-content {
-    margin-left: 30%;
-    margin-right: 30%;
-    font-family: 'Candara';
+    margin-bottom: 48px;
 }

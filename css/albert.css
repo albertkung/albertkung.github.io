@@ -63,6 +63,12 @@ audio {
     border-left: thick solid #000000;
 }
 .download-header {
-	text-align: center;
-	font-family: 'Palatino';
+    text-align: center;
+    font-family: 'Palatino';
+    margin-bottom: 36px;
+}
+.download-content {
+    margin-left: 30%;
+    margin-right: 30%;
+    font-family: 'Candara';
 }

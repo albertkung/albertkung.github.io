@@ -17,15 +17,18 @@ body {
     font-family: 'Candara';
     text-transform: uppercase;
 }
-.container .h1 {
-    font-size: 48px;
+.jumbotron {
+    background-image: url("../bg.png");
+    font-family: 'Candara';
     text-align: center;
-    font-family: 'Futura';
+}
+.jumbotron .container .h1 {
+    color: #FFFFFF;
+    font-size: 48px;
 }
 .jumbotron .container .h2 {
+    color: #CCCCFF;
     font-size: 20px;
-    text-align: center;
-    font-family: 'Futura';
 }
 .project {
     text-align: center;	

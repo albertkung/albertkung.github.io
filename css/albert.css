@@ -19,7 +19,7 @@ body {
 }
 .jumbotron {
     background-image: url("../bg.png");
-    font-family: 'Candara';
+    font-family: 'Raleway', sans-serif;
     text-align: center;
 }
 .jumbotron .container .h1 {
@@ -29,6 +29,12 @@ body {
 .jumbotron .container .h2 {
     color: #CCCCFF;
     font-size: 20px;
+}
+.about-me {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .project {
     text-align: center;	

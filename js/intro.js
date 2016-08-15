@@ -1,4 +1,4 @@
-var my_text = "^^^^^^^^ My name is Albert Kung.^^ Welcome to my website.^^^^ It is still under construction,^ but feel free to take a look around.";
+var my_text = "^^^^^^Hello world! ^^^^^^^^My name is Albert Kung.^^ Welcome to my website.^^^^ It is still under construction,^ but feel free to take a look around.";
 var max_length = my_text.length;
 
 function animeme() {

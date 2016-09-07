@@ -22,7 +22,7 @@ function animeme() {
     }
 }
 
-function sleep (time) {
+function sleep(time) {
     return new Promise((resolve) => setTimeout(resolve, time));
 }
 

@@ -1,3 +1,4 @@
+/* General */
 body {
     padding-top: 50px;
 }
@@ -30,23 +31,37 @@ body {
     color: #CCCCFF;
     font-size: 20px;
 }
-.intro-container {
-    margin-left: 10%;
-    margin-right: 10%;
-}
+
+/* Main page */
 .about-me {
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
     display:inline;
 }
+.intro-container .well-lg {
+    color: #FFFFFF;
+    background-color: #666666;
+}
+.console {
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #666666
+
+}
+
+/* Project page */
 .project {
     text-align: center;	
 }
+
+/* Contact page */
 .contact {
     font-size: 18px;
     font-family: 'Candara';
     margin: 10px;
 }
+
+/* Music page */
 .song-title {
     font-family: 'Open Sans', sans-serif;
     text-align: center;

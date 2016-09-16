@@ -37,9 +37,15 @@ $("#execute").click(function() {
 
 // Language parser
 
+var commands = ["display", "var", "list", "send", "secret"]; // all known commands
+var terms = ["origin, education, age"];
+var longInfo = ["Albert was raised in quiet suburbs of Lexington, a famous historical site outside of Boston.",
+                "Albert studies at Cornell University in the wastelands of Ithaca, NY.",
+                "Albert is 20 years old. His birthday is on December 26th; please send him something nice."];
+var shortInfo = ["Lexington, MA", "Cornell University, College of Engineering", "20"];
+
 // Parses a single line
 function parseLine(env, line) {
-    var commands = ["display", "var", "send", "secret"]; // all known commands
     for (var x = 0; x < commands.length; x++) {
         if (line.indexOf(commands[x]) == 0) {
             var fParen = line.indexOf("(");
@@ -47,9 +53,11 @@ function parseLine(env, line) {
             if (fParen != -1 && lParen != -1) {
                 var par = line.substring(fParen+1, lParen);
                 var args = par.split(",");
+                // display
                 if (x == 0) {
-                    $("#exe").append(env[args[0]] + "\n"); // displays content object
+                    $("#exe").append(env[args[0]] + "\n");
                 }
+                // var/get
                 else if (x == 1) {
                     var e = line.indexOf("=");
                     var v = line.substring(3, e-1).trim();
@@ -58,20 +66,28 @@ function parseLine(env, line) {
                     }
                     env[v] = getObject(args[0].split('"').join("").trim(), args[1]);
                 }
+                // list
+                else if (x == 2) {
+                    $("#exe").append(terms.sort() + "\n");
+                }
             }
         }
     }
 }
 
-var terms = ["origin"];
-var longInfo = ["Albert was raised in quiet suburbs of Lexington, a famous historical site outside of Boston.\n"];
-var shortInfo = ["Lexington, MA\n"];
 // Returns relevant object
 function getObject(type, length) {
     for (var x = 0; x < terms.length; x++) {
         if (terms[x] == type) {
-            return length == "true" ? longInfo[x] : shortInfo[x];
+            var x = length == "true" ? longInfo[x] : shortInfo[x];
+            return x + "\n";
         }
     }
     return "error: undefined type";
 }
+
+$(window).keydown(function(e){
+    if (e.ctrlKey && e.keyCode == 13) {
+        $("#execute").click();
+    }
+});

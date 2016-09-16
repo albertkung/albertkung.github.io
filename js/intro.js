@@ -10,7 +10,7 @@ function animeme() {
         }
         else if (my_text.charAt(pos) == '^') {
             clearInterval(id);
-            sleep(250).then(() => {
+            sleep(150).then(() => {
                 pos++;
                 id = setInterval(frame, 50);
             })

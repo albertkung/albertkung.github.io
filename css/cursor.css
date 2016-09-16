@@ -1,5 +1,5 @@
 .blinking-cursor {
-  font-size: 24px;
+  font-size: 20px;
   font-family: 'Open Sans', sans-serif;
   margin-left: -8px;
   display:inline;
@@ -15,7 +15,7 @@
     color: transparent;
   }
   50% {
-    color: #FFF;
+    color: #000;
   }
 }
 
@@ -24,7 +24,7 @@
     color: transparent;
   }
   50% {
-    color: #FFF;
+    color: #000;
   }
 }
 
@@ -33,7 +33,7 @@
     color: transparent;
   }
   50% {
-    color: #FFF;
+    color: #000;
   }
 }
 
@@ -42,7 +42,7 @@
     color: transparent;
   }
   50% {
-    color: #FFF;
+    color: #000;
   }
 }
 
@@ -51,6 +51,6 @@
     color: transparent;
   }
   50% {
-    color: #FFF;
+    color: #000;
   }
 }

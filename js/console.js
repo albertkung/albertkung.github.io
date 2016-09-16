@@ -38,7 +38,7 @@ $("#execute").click(function() {
 // Language parser
 
 var commands = ["display", "var", "list", "send", "secret"]; // all known commands
-var terms = ["origin, education, age"];
+var terms = ["origin", "education", "age"];
 var longInfo = ["Albert was raised in quiet suburbs of Lexington, a famous historical site outside of Boston.",
                 "Albert studies at Cornell University in the wastelands of Ithaca, NY.",
                 "Albert is 20 years old. His birthday is on December 26th; please send him something nice."];
@@ -55,7 +55,7 @@ function parseLine(env, line) {
                 var args = par.split(",");
                 // display
                 if (x == 0) {
-                    $("#exe").append(env[args[0]] + "\n");
+                    $("#exe").append(env[args[0]] + "<br>");
                 }
                 // var/get
                 else if (x == 1) {
@@ -68,7 +68,7 @@ function parseLine(env, line) {
                 }
                 // list
                 else if (x == 2) {
-                    $("#exe").append(terms.sort() + "\n");
+                    $("#exe").append(terms + "<br>");
                 }
             }
         }
@@ -77,6 +77,7 @@ function parseLine(env, line) {
 
 // Returns relevant object
 function getObject(type, length) {
+    console.log(type);
     for (var x = 0; x < terms.length; x++) {
         if (terms[x] == type) {
             var x = length == "true" ? longInfo[x] : shortInfo[x];

@@ -1,6 +1,6 @@
 // Auto-size the console textarea
 function h(e) {
-    $(e).css({'height':'auto','overflow-y':'hidden'}).height(e.scrollHeight);
+    $(e).css({'height':'400px','overflow-y':'hidden'}).height(e.scrollHeight);
 }
 $("textarea").each(function() {
     h(this);

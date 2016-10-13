@@ -16,7 +16,7 @@ function animeme() {
             })
         }
         else {
-            $("#intro").append(my_text.charAt(pos));
+            $("#console-output").append(my_text.charAt(pos));
             pos++;
         }
     }

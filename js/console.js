@@ -1,16 +1,5 @@
-// Auto-size the console textarea
-function h(e) {
-    $(e).css({'height':'400px','overflow-y':'hidden'}).height(e.scrollHeight);
-}
-$("textarea").each(function() {
-    h(this);
-    }).on('input', function() {
-        h(this);
-});
-
 // Help/execute modals
 var helpModal = document.getElementById('help-modal');
-var exeModal = document.getElementById('exe-modal');
 $("#help").click(function() {
     helpModal.style.display = "block";
 });
@@ -21,22 +10,21 @@ window.onclick = function(event) {
     if (event.target == helpModal) {
         helpModal.style.display = "none";
     }
-    else if (event.target == exeModal) {
-        exeModal.style.display = "none";
-    }
 }
-$("#execute").click(function() {
-    $("#exe").html(""); // i want everybody to clear the area right now
-    var input = $("textarea").val().split("\n");
-    var env = {};
-    for (var x = 0; x < input.length; x++) {
-        parseLine(env, input[x].trim());
+
+// Upon line input
+$("#console-input").keydown(function(e){
+    if (e.keyCode == 13) {
+        e.preventDefault();
+        var input = $("#console-input").val();
+        $("#console-input").val(""); // i want everybody to clear the area right now
+        parseLine(input)
     }
-    exeModal.style.display = "block";
 });
 
 // Language parser
 
+// Language syntax
 var commands = ["display", "var", "list", "send", "secret"]; // all known commands
 var terms = ["origin", "education", "age"];
 var longInfo = ["Albert was raised in quiet suburbs of Lexington, a famous historical site outside of Boston.",
@@ -44,8 +32,11 @@ var longInfo = ["Albert was raised in quiet suburbs of Lexington, a famous histo
                 "Albert is 20 years old. His birthday is on December 26th; please send him something nice."];
 var shortInfo = ["Lexington, MA", "Cornell University, College of Engineering", "20"];
 
+// Global env
+var env = {};
+
 // Parses a single line
-function parseLine(env, line) {
+function parseLine(line) {
     for (var x = 0; x < commands.length; x++) {
         if (line.indexOf(commands[x]) == 0) {
             var fParen = line.indexOf("(");
@@ -86,9 +77,3 @@ function getObject(type, length) {
     }
     return "error: undefined type";
 }
-
-$(window).keydown(function(e){
-    if (e.ctrlKey && e.keyCode == 13) {
-        $("#execute").click();
-    }
-});

@@ -56,49 +56,9 @@
         </div>
     </div>
 
-    <div class="container intro-container">
-        <div class="about-me" id="intro">> </div>
-        <div class="blinking-cursor">|</div>
-    </div>
-
     <div class="container">
-        <div class="vertical-line"></div>
-        <textarea class="console"></textarea>
-    </div>
-
-    <div class="container intro-buttons">
-        <button class="btn btn-default" id="execute">Execute</button>
-        <button class="btn btn-default" id="help">Help</button>
-    </div>
-
-    <div id="exe-modal" class="modal">
-        <div class="modal-content" id="exe"></div>
-    </div>
-
-    <div id="help-modal" class="modal">
-        <div class="modal-content doc">
-            <span class="close" id="close-help">×</span>
-            <p><b><font size="5">Console Interface Documentation</font></b></p>
-            <p><b>display(object displayObj)</b></p>
-            <p>&emsp;&emsp;Displays object a in the window.</p>
-            <p>&emsp;&emsp;displayObj: Object to be displayed.</p>
-            <p><b>get(string infoType[, bool longText])</b></p>
-            <p>&emsp;&emsp;Returns object containing relevant information.</p>
-            <p>&emsp;&emsp;infoType: The type of information.</p>
-            <p>&emsp;&emsp;longText: If true, returns long version of information. Defaults to false.</p>
-            <p><b>list()</b></p>
-            <p>&emsp;&emsp;Displays the types of information that are available.</p>
-            <p><b>send(string message)</b></p>
-            <p>&emsp;&emsp;Sends me a message [not implemented yet].</p>
-            <p>&emsp;&emsp;message: Message to be stored.</p>
-            <p><b>secret(string command)</b></p>
-            <p>&emsp;&emsp;Executes a secret command.</p>
-            <p>&emsp;&emsp;command: The command to be executed.</p>
-            <br>
-            <p>Example:</p>
-            <p>&emsp;&emsp;var originInfo = get("origin");</p>
-            <p>&emsp;&emsp;display(originInfo);</p>
-        </div>
+        <textarea readonly id="console-output" class="console-output"></textarea>
+        <textarea autofocus rows="1" id="console-input" class="console-input"></textarea>
     </div>
 
     <!-- JQuery -->

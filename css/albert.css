@@ -45,28 +45,39 @@ body {
 .intro-container {
     margin-bottom: 20px;
 }
-.intro-buttons {
-    text-align: center;
-}
-.console {
+.console-output {
     color: #FFFFFF;
     background-color: #666666;
     resize: none;
     display: block;
     padding: 10px;
+    height: 400px;
     margin: auto;
     width: 100%;
-    height: auto;
+    border: none;
+    font-size: 16px;
+    font-family: 'Consolas';
+    outline: none;
+}
+.console-input {
+    color: #FFFFFF;
+    background-color: #666666;
+    resize: none;
+    white-space: nowrap;
+    display: block;
+    padding: 10px;
+    margin: auto;
+    width: 100%;
     margin-bottom: 20px;
     border: none;
     font-size: 16px;
     font-family: 'Consolas';
     outline: none;
-    box-shadow: 0 0 10px #719ECE;
+    box-shadow: 0 0 10px #FFF;
 }
-.console:focus {
+.console-input:focus {
     outline: none;
-    box-shadow: 0 0 10px #719ECE;
+    box-shadow: 0 0 10px #FFF;
 }
 .modal {
     display: none;

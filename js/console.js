@@ -1,6 +1,8 @@
 // Intro commands
-var my_text = "^^^^^^Hello world! ^^^^^^My name is Albert.^^ Welcome to my website :)";
+var my_text = "^^^^Hello world! ^^^^^^My name is Albert.^^ Welcome to my website :)@";
 var max_length = my_text.length;
+
+var canExecute = false;
 
 function animeme() {
     var pos = 0;
@@ -15,6 +17,10 @@ function animeme() {
                 pos++;
                 id = setInterval(frame, 50);
             })
+        }
+        else if (my_text.charAt(pos) == "@") {
+            canExecute = true;
+            pos++;
         }
         else {
             $("#console-output").append(my_text.charAt(pos));
@@ -49,7 +55,9 @@ $("#console-input").keydown(function(e){
         e.preventDefault();
         var input = $("#console-input").val();
         $("#console-input").val(""); // i want everybody to clear the area right now
-        parseLine(input.trim())
+        if (canExecute) {
+            parseLine(input.trim())
+        }
     }
 });
 

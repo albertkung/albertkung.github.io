@@ -1,4 +1,4 @@
-var my_text = "^^^^^^Hello world! ^^^^^^^^My name is Albert Kung.^^ Welcome to my website.^^^^ It is still under construction,^ but feel free to take a look around.";
+var my_text = "^^^^^^Hello world! ^^^^^^My name is Albert.^^ Welcome to my website :)";
 var max_length = my_text.length;
 
 function animeme() {
@@ -10,7 +10,7 @@ function animeme() {
         }
         else if (my_text.charAt(pos) == '^') {
             clearInterval(id);
-            sleep(150).then(() => {
+            sleep(50).then(() => {
                 pos++;
                 id = setInterval(frame, 50);
             })

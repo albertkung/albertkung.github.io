@@ -103,7 +103,7 @@ function parseLine(line) {
             output.append("\nNot implemented yet");
             break;
         default:
-            output.append("\nWhat?");
+            output.append("\nI don't understand. Try \"help\" for help");
     }
     output.scrollTop(output[0].scrollHeight - output.height());
 }
